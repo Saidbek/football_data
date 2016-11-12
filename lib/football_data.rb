@@ -1,5 +1,3 @@
-require "football_data/version"
-
-module FootballData
-  # Your code goes here...
-end
+require 'football_data/base'
+require 'football_data/client'
+require 'football_data/version'
