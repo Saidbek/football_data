@@ -113,7 +113,7 @@ module FootballData
     end
 
     # Show all players for a certain team.
-    def team_player(id)
+    def team_players(id)
       raise 'missing team id' if id.nil?
 
       get_request("teams/#{id}/players/")
