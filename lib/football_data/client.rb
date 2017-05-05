@@ -1,3 +1,5 @@
+require 'json'
+
 module FootballData
   class Client < Base
     
@@ -5,14 +7,14 @@ module FootballData
     def leagues(opts={})
       year = opts.fetch(:year) { Time.now.year }
 
-      get_request("competitions/?season=#{year}")
+      json_response get_request("competitions/?season=#{year}")
     end
 
     # List all teams for a certain league.
     def league_teams(id)
       raise 'missing id' if id.nil?
 
-      get_request("competitions/#{id}/teams")
+      json_response get_request("competitions/#{id}/teams")
     end
 
     # Show League Table / current standing.
@@ -23,12 +25,12 @@ module FootballData
     def league_table(id, opts={})
       raise 'missing id' if id.nil?
 
-      match_day = opts[:match_day]
+      match_day = opts.dig(:match_day)
 
       uri = "competitions/#{id}/leagueTable/"
       url = match_day.nil? ? uri : "#{uri}?matchday=#{match_day}"
 
-      get_request(url)
+      json_response get_request(url)
     end
 
     # List all fixtures for a certain league.
@@ -47,7 +49,7 @@ module FootballData
       url = time_frame.nil? ? uri : "#{uri}?timeFrame=#{time_frame}"
       url = match_day.nil? ? url : "#{url}?matchday=#{match_day}"
 
-      get_request(url)
+      json_response get_request(url)
     end
 
     # List fixtures across a set of leagues.
@@ -64,7 +66,7 @@ module FootballData
       url = time_frame.nil? ? uri : "#{uri}?timeFrame=#{time_frame}"
       url = league.nil? ? url : "#{url}?league=#{league}"
 
-      get_request(url)
+      json_response get_request(url)
     end
 
     # Show one fixture.
@@ -80,7 +82,7 @@ module FootballData
       uri = "fixtures/#{id}/"
       url = head2head.nil? ? uri : "#{uri}?head2head=#{head2head}"
 
-      get_request(url)
+      json_response get_request(url)
     end
 
     # Show all fixtures for a certain team.
@@ -102,21 +104,27 @@ module FootballData
       url = time_frame.nil? ? url : "#{url}?timeFrame=#{time_frame}"
       url = venue.nil? ? url : "#{url}?venue=#{venue}"
 
-      get_request(url)
+      json_response get_request(url)
     end
 
     # Show one team.
     def team(id)
       raise 'missing id' if id.nil?
 
-      get_request("teams/#{id}/")
+      json_response get_request("teams/#{id}/")
     end
 
     # Show all players for a certain team.
     def team_players(id)
       raise 'missing team id' if id.nil?
 
-      get_request("teams/#{id}/players/")
+      json_response get_request("teams/#{id}/players/")
+    end
+
+    private
+
+    def json_response(request)
+      JSON.parse(request.body, symbolize_names: true)
     end
   end
 end
