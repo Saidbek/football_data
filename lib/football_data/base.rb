@@ -4,7 +4,24 @@ require 'football_data/errors'
 module FootballData
   class Base
     API_ENDPOINT = 'http://api.football-data.org'
-    API_VERSION  = 'v1'
+    API_VERSION = 'v1'
+    API_LIVE = 'http://soccer-cli.appspot.com'
+
+    def get(path, params={})
+      uri = URI("#{API_ENDPOINT}/#{API_VERSION}/#{path}")
+
+      request = build_request(uri, build_headers(params))
+      build_response(uri, request)
+    end
+
+    def get_live_scores
+      uri = URI("#{API_LIVE}/")
+
+      request = build_request(uri)
+      build_response(uri, request)
+    end
+
+    private
 
     def build_headers(params)
       {
@@ -13,10 +30,11 @@ module FootballData
       }.merge(params)
     end
 
-    def get_request(path, params={})
-      uri = build_uri(path)
-      request = Net::HTTP::Get.new(uri, build_headers(params))
+    def build_request(uri, headers={})
+      Net::HTTP::Get.new(uri, headers)
+    end
 
+    def build_response(uri, request)
       response = Net::HTTP.start(uri.host, uri.port) do |http|
         http.request(request)
       end
@@ -26,10 +44,6 @@ module FootballData
       else
         raise FootballData::ResponseError.new(response)
       end
-    end
-
-    def build_uri(path)
-      URI "#{API_ENDPOINT}/#{API_VERSION}/#{path}"
     end
   end
 end
