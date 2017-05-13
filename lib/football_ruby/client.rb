@@ -1,6 +1,6 @@
 require 'json'
 
-module FootballData
+module FootballRuby
   class Client < Base
     
     # List all available leagues.

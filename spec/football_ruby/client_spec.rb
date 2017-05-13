@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe FootballData::Client do
+describe FootballRuby::Client do
   let(:base_url) { 'http://api.football-data.org/v1' }
   let(:year) { Time.now.year }
   let(:id) { 426 }
@@ -175,7 +175,7 @@ describe FootballData::Client do
     end
 
     it 'returns body' do
-      response = subject.team_player(team_id)
+      response = subject.team_players(team_id)
 
       expect(response.body).to eq(body)
     end

@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'football_data/version'
+require 'football_ruby/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'football_data'
-  spec.version       = FootballData::VERSION
+  spec.name          = 'football_ruby'
+  spec.version       = FootballRuby::VERSION
   spec.authors       = ['Said Kaldybaev']
   spec.email         = ['said.kaldybaev@gmail.com']
 
   spec.summary       = %q{ruby wrapper for football-data.org API}
   spec.description   = %q{ruby wrapper for football-data.org API}
-  spec.homepage      = 'https://github.com/Saidbek/football_data'
+  spec.homepage      = 'https://github.com/Saidbek/football_ruby'
   spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

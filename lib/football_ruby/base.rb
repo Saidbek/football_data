@@ -1,7 +1,7 @@
 require 'net/http'
-require 'football_data/errors'
+require 'football_ruby/errors'
 
-module FootballData
+module FootballRuby
   class Base
     API_ENDPOINT = 'http://api.football-data.org'
     API_VERSION = 'v1'
@@ -42,7 +42,7 @@ module FootballData
       if response.kind_of? Net::HTTPSuccess
         response
       else
-        raise FootballData::ResponseError.new(response)
+        raise FootballRuby::ResponseError.new(response)
       end
     end
   end

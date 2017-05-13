@@ -1,4 +1,4 @@
-module FootballData
+module FootballRuby
   class Error < StandardError; end
 
   class ResponseError < Error

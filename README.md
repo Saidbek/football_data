@@ -1,4 +1,4 @@
-# FootballData
+# FootballRuby
 
 football-data.org API Container for Ruby
 
@@ -7,7 +7,7 @@ football-data.org API Container for Ruby
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'football_data'
+gem 'football_ruby'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install football_data
+    $ gem install football_ruby
 
 ## Usage
 
@@ -24,7 +24,7 @@ More about filters, structure and API: [football-data.org](http://api.football-d
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/Saidbek/football_data. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/Saidbek/football_ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
