@@ -179,7 +179,7 @@ describe FootballRuby::Client do
     end
   end
 
-  describe '#team_players', :vcr do
+  describe '#live_scores', :vcr do
     let(:response) { subject.live_scores }
 
     it 'returns a list of games' do
