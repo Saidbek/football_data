@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://soccer-cli.appspot.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - soccer-cli.appspot.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Cloud-Trace-Context:
+      - acf1c89b920384a69b73bad87cf518ab
+      Date:
+      - Fri, 19 May 2017 15:59:34 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '278'
+    body:
+      encoding: UTF-8
+      string: "{\n    \"games\": [\n        {\n            \"league\": \"Spanish Primera
+        Division\", \n            \"goalsAwayTeam\": -1, \n            \"time\": \"6:45
+        PM UTC\", \n            \"homeTeamName\": \"Granada\", \n            \"awayTeamName\":
+        \"Espanyol\", \n            \"goalsHomeTeam\": -1\n        }\n    ]\n}"
+    http_version: 
+  recorded_at: Fri, 19 May 2017 15:59:34 GMT
+recorded_with: VCR 3.0.1
