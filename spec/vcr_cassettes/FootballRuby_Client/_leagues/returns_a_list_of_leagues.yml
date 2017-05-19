@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.football-data.org/v1/competitions/?season=2016
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Auth-Token:
+      - 31d3d417db12416abbb83e1e3f0a47a9
+      X-Response-Control:
+      - full
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.football-data.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 19 May 2017 15:50:27 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Application-Context:
+      - application:production
+      X-Requests-Available:
+      - '49'
+      X-Requestcounter-Reset:
+      - '60'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET
+      X-Authenticated-Client:
+      - Fragus
+      X-Api-Version:
+      - v1
+      X-Response-Control:
+      - full
+    body:
+      encoding: UTF-8
+      string: '[{"_links":{"self":{"href":"http://api.football-data.org/v1/competitions/424"},"teams":{"href":"http://api.football-data.org/v1/competitions/424/teams"},"fixtures":{"href":"http://api.football-data.org/v1/competitions/424/fixtures"},"leagueTable":{"href":"http://api.football-data.org/v1/competitions/424/leagueTable"}},"id":424,"caption":"European
+        Championships France 2016","league":"EC","year":"2016","currentMatchday":7,"numberOfMatchdays":46,"numberOfTeams":24,"numberOfGames":51,"lastUpdated":"2017-04-16T09:10:22Z"},{"_links":{"self":{"href":"http://api.football-data.org/v1/competitions/426"},"teams":{"href":"http://api.football-data.org/v1/competitions/426/teams"},"fixtures":{"href":"http://api.football-data.org/v1/competitions/426/fixtures"},"leagueTable":{"href":"http://api.football-data.org/v1/competitions/426/leagueTable"}},"id":426,"caption":"Premier
+        League 2016/17","league":"PL","year":"2016","currentMatchday":34,"numberOfMatchdays":38,"numberOfTeams":20,"numberOfGames":380,"lastUpdated":"2017-05-18T20:50:08Z"},{"_links":{"self":{"href":"http://api.football-data.org/v1/competitions/427"},"teams":{"href":"http://api.football-data.org/v1/competitions/427/teams"},"fixtures":{"href":"http://api.football-data.org/v1/competitions/427/fixtures"},"leagueTable":{"href":"http://api.football-data.org/v1/competitions/427/leagueTable"}},"id":427,"caption":"Championship
+        2016/17","league":"ELC","year":"2016","currentMatchday":46,"numberOfMatchdays":46,"numberOfTeams":24,"numberOfGames":552,"lastUpdated":"2017-05-07T16:20:16Z"},{"_links":{"self":{"href":"http://api.football-data.org/v1/competitions/428"},"teams":{"href":"http://api.football-data.org/v1/competitions/428/teams"},"fixtures":{"href":"http://api.football-data.org/v1/competitions/428/fixtures"},"leagueTable":{"href":"http://api.football-data.org/v1/competitions/428/leagueTable"}},"id":428,"caption":"League
+        One 2016/17","league":"EL1","year":"2016","currentMatchday":46,"numberOfMatchdays":46,"numberOfTeams":24,"numberOfGames":552,"lastUpdated":"2017-04-30T14:30:21Z"},{"_links":{"self":{"href":"http://api.football-data.org/v1/competitions/429"},"teams":{"href":"http://api.football-data.org/v1/competitions/429/teams"},"fixtures":{"href":"http://api.football-data.org/v1/competitions/429/fixtures"},"leagueTable":{"href":"http://api.football-data.org/v1/competitions/429/leagueTable"}},"id":429,"caption":"FA-Cup
+        2016/17","league":"FAC","year":"2016","currentMatchday":8,"numberOfMatchdays":38,"numberOfTeams":20,"numberOfGames":156,"lastUpdated":"2017-04-29T13:00:04Z"},{"_links":{"self":{"href":"http://api.football-data.org/v1/competitions/430"},"teams":{"href":"http://api.football-data.org/v1/competitions/430/teams"},"fixtures":{"href":"http://api.football-data.org/v1/competitions/430/fixtures"},"leagueTable":{"href":"http://api.football-data.org/v1/competitions/430/leagueTable"}},"id":430,"caption":"1.
+        Bundesliga 2016/17","league":"BL1","year":"2016","currentMatchday":34,"numberOfMatchdays":34,"numberOfTeams":18,"numberOfGames":306,"lastUpdated":"2017-05-16T04:00:06Z"},{"_links":{"self":{"href":"http://api.football-data.org/v1/competitions/431"},"teams":{"href":"http://api.football-data.org/v1/competitions/431/teams"},"fixtures":{"href":"http://api.football-data.org/v1/competitions/431/fixtures"},"leagueTable":{"href":"http://api.football-data.org/v1/competitions/431/leagueTable"}},"id":431,"caption":"2.
+        Bundesliga 2016/17","league":"BL2","year":"2016","currentMatchday":34,"numberOfMatchdays":34,"numberOfTeams":18,"numberOfGames":306,"lastUpdated":"2017-05-18T01:20:13Z"},{"_links":{"self":{"href":"http://api.football-data.org/v1/competitions/432"},"teams":{"href":"http://api.football-data.org/v1/competitions/432/teams"},"fixtures":{"href":"http://api.football-data.org/v1/competitions/432/fixtures"},"leagueTable":{"href":"http://api.football-data.org/v1/competitions/432/leagueTable"}},"id":432,"caption":"DFB-Pokal
+        2016/17","league":"DFB","year":"2016","currentMatchday":6,"numberOfMatchdays":126,"numberOfTeams":64,"numberOfGames":63,"lastUpdated":"2017-04-29T19:00:09Z"},{"_links":{"self":{"href":"http://api.football-data.org/v1/competitions/433"},"teams":{"href":"http://api.football-data.org/v1/competitions/433/teams"},"fixtures":{"href":"http://api.football-data.org/v1/competitions/433/fixtures"},"leagueTable":{"href":"http://api.football-data.org/v1/competitions/433/leagueTable"}},"id":433,"caption":"Eredivisie
+        2016/17","league":"DED","year":"2016","currentMatchday":34,"numberOfMatchdays":34,"numberOfTeams":18,"numberOfGames":306,"lastUpdated":"2017-05-14T14:30:20Z"},{"_links":{"self":{"href":"http://api.football-data.org/v1/competitions/434"},"teams":{"href":"http://api.football-data.org/v1/competitions/434/teams"},"fixtures":{"href":"http://api.football-data.org/v1/competitions/434/fixtures"},"leagueTable":{"href":"http://api.football-data.org/v1/competitions/434/leagueTable"}},"id":434,"caption":"Ligue
+        1 2016/17","league":"FL1","year":"2016","currentMatchday":38,"numberOfMatchdays":38,"numberOfTeams":20,"numberOfGames":380,"lastUpdated":"2017-05-19T07:00:09Z"},{"_links":{"self":{"href":"http://api.football-data.org/v1/competitions/435"},"teams":{"href":"http://api.football-data.org/v1/competitions/435/teams"},"fixtures":{"href":"http://api.football-data.org/v1/competitions/435/fixtures"},"leagueTable":{"href":"http://api.football-data.org/v1/competitions/435/leagueTable"}},"id":435,"caption":"Ligue
+        2 2016/17","league":"FL2","year":"2016","currentMatchday":38,"numberOfMatchdays":38,"numberOfTeams":20,"numberOfGames":380,"lastUpdated":"2017-05-18T01:20:27Z"},{"_links":{"self":{"href":"http://api.football-data.org/v1/competitions/436"},"teams":{"href":"http://api.football-data.org/v1/competitions/436/teams"},"fixtures":{"href":"http://api.football-data.org/v1/competitions/436/fixtures"},"leagueTable":{"href":"http://api.football-data.org/v1/competitions/436/leagueTable"}},"id":436,"caption":"Primera
+        Division 2016/17","league":"PD","year":"2016","currentMatchday":38,"numberOfMatchdays":38,"numberOfTeams":20,"numberOfGames":380,"lastUpdated":"2017-05-18T05:05:34Z"},{"_links":{"self":{"href":"http://api.football-data.org/v1/competitions/437"},"teams":{"href":"http://api.football-data.org/v1/competitions/437/teams"},"fixtures":{"href":"http://api.football-data.org/v1/competitions/437/fixtures"},"leagueTable":{"href":"http://api.football-data.org/v1/competitions/437/leagueTable"}},"id":437,"caption":"Liga
+        Adelante 2016/17","league":"SD","year":"2016","currentMatchday":39,"numberOfMatchdays":42,"numberOfTeams":22,"numberOfGames":462,"lastUpdated":"2017-05-18T01:20:44Z"},{"_links":{"self":{"href":"http://api.football-data.org/v1/competitions/438"},"teams":{"href":"http://api.football-data.org/v1/competitions/438/teams"},"fixtures":{"href":"http://api.football-data.org/v1/competitions/438/fixtures"},"leagueTable":{"href":"http://api.football-data.org/v1/competitions/438/leagueTable"}},"id":438,"caption":"Serie
+        A 2016/17","league":"SA","year":"2016","currentMatchday":37,"numberOfMatchdays":38,"numberOfTeams":20,"numberOfGames":380,"lastUpdated":"2017-05-18T01:20:51Z"},{"_links":{"self":{"href":"http://api.football-data.org/v1/competitions/439"},"teams":{"href":"http://api.football-data.org/v1/competitions/439/teams"},"fixtures":{"href":"http://api.football-data.org/v1/competitions/439/fixtures"},"leagueTable":{"href":"http://api.football-data.org/v1/competitions/439/leagueTable"}},"id":439,"caption":"Primeira
+        Liga 2016/17","league":"PPL","year":"2016","currentMatchday":34,"numberOfMatchdays":34,"numberOfTeams":18,"numberOfGames":306,"lastUpdated":"2017-05-18T10:00:16Z"},{"_links":{"self":{"href":"http://api.football-data.org/v1/competitions/440"},"teams":{"href":"http://api.football-data.org/v1/competitions/440/teams"},"fixtures":{"href":"http://api.football-data.org/v1/competitions/440/fixtures"},"leagueTable":{"href":"http://api.football-data.org/v1/competitions/440/leagueTable"}},"id":440,"caption":"Champions
+        League 2016/17","league":"CL","year":"2016","currentMatchday":10,"numberOfMatchdays":62,"numberOfTeams":32,"numberOfGames":125,"lastUpdated":"2017-05-18T01:20:59Z"},{"_links":{"self":{"href":"http://api.football-data.org/v1/competitions/441"},"teams":{"href":"http://api.football-data.org/v1/competitions/441/teams"},"fixtures":{"href":"http://api.football-data.org/v1/competitions/441/fixtures"},"leagueTable":{"href":"http://api.football-data.org/v1/competitions/441/leagueTable"}},"id":441,"caption":"Serie
+        B","league":"SB","year":"2016","currentMatchday":42,"numberOfMatchdays":42,"numberOfTeams":22,"numberOfGames":462,"lastUpdated":"2017-05-18T20:30:48Z"},{"_links":{"self":{"href":"http://api.football-data.org/v1/competitions/442"},"teams":{"href":"http://api.football-data.org/v1/competitions/442/teams"},"fixtures":{"href":"http://api.football-data.org/v1/competitions/442/fixtures"},"leagueTable":{"href":"http://api.football-data.org/v1/competitions/442/leagueTable"}},"id":442,"caption":"English
+        National League","league":"ENL","year":"2016","currentMatchday":46,"numberOfMatchdays":46,"numberOfTeams":24,"numberOfGames":552,"lastUpdated":"2017-04-29T13:30:37Z"},{"_links":{"self":{"href":"http://api.football-data.org/v1/competitions/443"},"teams":{"href":"http://api.football-data.org/v1/competitions/443/teams"},"fixtures":{"href":"http://api.football-data.org/v1/competitions/443/fixtures"},"leagueTable":{"href":"http://api.football-data.org/v1/competitions/443/leagueTable"}},"id":443,"caption":"League
+        Two","league":"EL2","year":"2016","currentMatchday":46,"numberOfMatchdays":46,"numberOfTeams":24,"numberOfGames":552,"lastUpdated":"2017-05-06T20:00:51Z"}]'
+    http_version: 
+  recorded_at: Fri, 19 May 2017 15:50:27 GMT
+recorded_with: VCR 3.0.1

@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.football-data.org/v1/teams/81/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Auth-Token:
+      - 31d3d417db12416abbb83e1e3f0a47a9
+      X-Response-Control:
+      - full
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.football-data.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 19 May 2017 15:50:31 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Application-Context:
+      - application:production
+      X-Requests-Available:
+      - '33'
+      X-Requestcounter-Reset:
+      - '55'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET
+      X-Authenticated-Client:
+      - Fragus
+      X-Api-Version:
+      - v1
+      X-Response-Control:
+      - full
+    body:
+      encoding: UTF-8
+      string: '{"_links":{"self":{"href":"http://api.football-data.org/v1/teams/81"},"fixtures":{"href":"http://api.football-data.org/v1/teams/81/fixtures"},"players":{"href":"http://api.football-data.org/v1/teams/81/players"}},"name":"FC
+        Barcelona","code":"FCB","shortName":"Barcelona","squadMarketValue":null,"crestUrl":"http://upload.wikimedia.org/wikipedia/de/a/aa/Fc_barcelona.svg"}'
+    http_version: 
+  recorded_at: Fri, 19 May 2017 15:50:31 GMT
+recorded_with: VCR 3.0.1
