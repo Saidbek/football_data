@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Said Kaldybaev']
   spec.email         = ['said.kaldybaev@gmail.com']
 
-  spec.summary       = %q{ruby wrapper for football-data.org API}
-  spec.description   = %q{ruby wrapper for football-data.org API}
+  spec.summary       = %q{football-data.org API wrapper in ruby}
+  spec.description   = %q{football-data.org API wrapper in ruby}
   spec.homepage      = 'https://github.com/Saidbek/football_ruby'
   spec.license       = 'MIT'
 
