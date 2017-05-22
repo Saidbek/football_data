@@ -12,7 +12,7 @@ module FootballRuby
 
     # List all teams for a certain league.
     def league_teams(id)
-      raise 'missing id' if id.nil?
+      raise IdMissingError, 'missing id' if id.nil?
 
       json_response get("competitions/#{id}/teams")
     end
@@ -23,7 +23,7 @@ module FootballRuby
     # match_day=/\d+/
 
     def league_table(id, opts={})
-      raise 'missing id' if id.nil?
+      raise IdMissingError, 'missing id' if id.nil?
 
       match_day = opts[:match_day]
 
@@ -40,7 +40,7 @@ module FootballRuby
     # match_day=/\d+/
 
     def league_fixtures(id, opts={})
-      raise 'missing id' if id.nil?
+      raise IdMissingError, 'missing id' if id.nil?
 
       time_frame  = opts[:time_frame]
       match_day   = opts[:match_day]
@@ -75,7 +75,7 @@ module FootballRuby
     # head2head=/\d+/
 
     def fixture(id, opts={})
-      raise 'missing id' if id.nil?
+      raise IdMissingError, 'missing id' if id.nil?
 
       head2head = opts[:head2head]
 
@@ -93,7 +93,7 @@ module FootballRuby
     # venue=/home|away/
 
     def team_fixtures(id, opts={})
-      raise 'missing id' if id.nil?
+      raise IdMissingError, 'missing id' if id.nil?
 
       season      = opts[:season]
       time_frame  = opts[:time_frame]
@@ -109,14 +109,14 @@ module FootballRuby
 
     # Show one team.
     def team(id)
-      raise 'missing id' if id.nil?
+      raise IdMissingError, 'missing id' if id.nil?
 
       json_response get("teams/#{id}/")
     end
 
     # Show all players for a certain team.
     def team_players(id)
-      raise 'missing team id' if id.nil?
+      raise IdMissingError, 'missing team id' if id.nil?
 
       json_response get("teams/#{id}/players/")
     end

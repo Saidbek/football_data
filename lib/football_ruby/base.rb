@@ -1,32 +1,26 @@
-require 'net/http'
-require 'football_ruby/errors'
-
 module FootballRuby
   class Base
-    API_ENDPOINT = 'http://api.football-data.org'
-    API_VERSION = 'v1'
-    API_LIVE = 'http://soccer-cli.appspot.com'
-
     def get(path, params={})
-      uri = URI("#{API_ENDPOINT}/#{API_VERSION}/#{path}")
-
+      uri = URI("#{FootballRuby::Configuration::API_ENDPOINT}/#{path}")
       request = build_request(uri, build_headers(params))
+
       build_response(uri, request)
     end
 
     def get_live_scores
-      uri = URI("#{API_LIVE}/")
-
+      uri = URI("#{FootballRuby::Configuration::LIVE_ENDPOINT}/")
       request = build_request(uri)
+
       build_response(uri, request)
     end
 
     private
 
     def build_headers(params)
+      raise ApiTokenMissingError, 'Please set up your api token' if FootballRuby.api_token.nil?
+
       {
-        'X-Auth-Token' => '31d3d417db12416abbb83e1e3f0a47a9',
-        'X-Response-Control' => 'full'
+        'X-Auth-Token': FootballRuby.api_token
       }.merge(params)
     end
 
@@ -35,14 +29,8 @@ module FootballRuby
     end
 
     def build_response(uri, request)
-      response = Net::HTTP.start(uri.host, uri.port) do |http|
+      Net::HTTP.start(uri.host, uri.port) do |http|
         http.request(request)
-      end
-
-      if response.kind_of? Net::HTTPSuccess
-        response
-      else
-        raise FootballRuby::ResponseError.new(response)
       end
     end
   end

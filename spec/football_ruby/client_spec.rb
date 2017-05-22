@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe FootballRuby::Client do
-  let(:base_url) { 'http://api.football-data.org/v1' }
   let(:la_liga_id) { 436 }
   let(:barcelona_id) { 81 }
 

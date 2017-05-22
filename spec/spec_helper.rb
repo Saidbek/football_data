@@ -17,4 +17,8 @@ VCR.configure do |c|
   c.configure_rspec_metadata!
 end
 
+FootballRuby.configure do |config|
+  config.api_token = '31d3d417db12416abbb83e1e3f0a123'
+end
+
 WebMock.disable_net_connect!(allow_localhost: true)
