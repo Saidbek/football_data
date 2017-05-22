@@ -1,3 +1,4 @@
+![Travis Master](https://travis-ci.org/Saidbek/football_ruby.svg?branch=master)
 # FootballRuby
 
 football-data.org API Container for Ruby
