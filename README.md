@@ -18,6 +18,25 @@ And then execute:
 Or install it yourself as:
 
     $ gem install football_ruby
+    
+## Configuration
+
+To use this gem you have to have an account at [football-data.org](http://football-data.org/client/register)
+There are two ways of configuration.
+
+1. Block
+
+```ruby
+FootballRuby.configure do |config|
+  config.api_token = API_TOKEN
+end
+```
+
+2. Inline
+
+```ruby
+FootballRuby.api_token = API_TOKEN
+```
 
 ## Usage
 
